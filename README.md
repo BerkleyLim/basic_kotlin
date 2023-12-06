@@ -12,3 +12,10 @@
 
 ## ver01
 - kotlin 환경 설정 및 기본 문법 수행
+- Hello world 띄우고, 구구단 (4의 배수 제외 출력)
+<br/>
+
+## ver02
+- Kotlin Spring Boot 설치 및 환경 변수 설정
+- 게시판 crud 개발 (Java spring boot 기반 게시판 리파지토리를 그대로 응용)
+- 참조 리파지토리 : https://github.com/BerkleyLim/project_board
