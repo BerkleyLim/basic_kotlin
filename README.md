@@ -6,3 +6,9 @@
 - 현재, Kotlin 문법을 간단하게 익히고, Ktor 프로젝트로 바로 들어간다.
 - 최근 외국 개발자들이 Java를 반이상 버리고, Kotlin으로 전환하는 추세로 Kotlin을 가볍게 익혀본다.
 - 최종적으로 Java + Spring Boot로 개발한 프로젝트를 Kotlin + Spring Boot로 전환하는 연습으로 진행해보기
+<br/>
+
+# 프로젝트 버전 별 설명서
+
+## ver01
+- kotlin 환경 설정 및 기본 문법 수행
