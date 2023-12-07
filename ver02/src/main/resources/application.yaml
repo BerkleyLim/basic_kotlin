@@ -1,0 +1,51 @@
+server:
+  shutdown: graceful
+  port: 8888
+
+spring:
+  h2:
+    console:
+      enabled: true
+
+  # 데이터베이스 죽는 현상 참조 : https://kakaocommerce.tistory.com/45
+  # 데이터베이스 누수 현상 해결하기 : https://do-study.tistory.com/97
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver  #마리아 DB시 org.mariadb.jdbc.Driver
+    # jdbc-url: jdbc:mysql://localhost:3306/profile?useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true&autoReconnect=true
+    url: jdbc:mysql://localhost:3306/profile?useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true&autoReconnect=true
+    password: 1111 # 비밀번호 수정
+    username: root
+    
+  devtools:
+    livereload:
+      enabled: true
+
+jwt:
+  header: Authorization
+  secret: and0LXRlc3QtYWxqamFiYWVnaS1qd3QtdGVzdC1hbGpqYWJhZWdpLWp3dC10ZXN0LWFsamphYmFlZ2ktand0LXRlc3QtYWxqamFiYWVnaS1qd3QtdGVzdC1hbGpqYWJhZWdpLWp3dC10ZXN0LWFsamphYmFlZ2ktand0LXRlc3QtYWxqamFiYWVnaS1qd3QtdGVzdC1hbGpqYWJhZWdp
+  token-validity-in-seconds: 86400
+
+# Mabatis 환경 설정 :
+# 참조 : https://jydlove.tistory.com/49
+# xml 대신 속성값으로 설정한다
+# mybatis:
+#   type-aliases-package: profile.back.mapper
+#   configuration:
+#     cache-enabled: true
+#     use-column-label: true
+#     use-generated-keys: false
+#     map-underscore-to-camel-case: true
+#     default-statement-timeout: 25000
+#     jdbc-type-for-null: NULL
+#   mapper-locations: classpath:/mapper/*Mapper.xml
+  
+logging:
+  level:
+    # root: debug
+    com.zaxxer.hikari.pool.HikariPool: debug
+    org:
+#      hibernate: info
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
