@@ -19,3 +19,7 @@
 - Kotlin Spring Boot 설치 및 환경 변수 설정
 - 게시판 crud 개발 (Java spring boot 기반 게시판 리파지토리를 그대로 응용)
 - 참조 리파지토리 : https://github.com/BerkleyLim/project_board
+
+## ver03
+- ver02에서 Spring Boot로 개발한 API를 Ktor 버전으로 변경
+- 게시판에 사용할 간단한 CRUD 를 구성한다.
